@@ -17,4 +17,6 @@ const Sorter = () => {
       </section>
     </main>
   )
-};
+}
+
+export default Sorter;
