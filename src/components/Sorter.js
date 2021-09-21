@@ -18,6 +18,10 @@ const Sorter = () => {
     ]
   );
 
+  const [resultsList, setResultsList] = useState([]);
+
+  const [currentChoice, setCurrentChoice] = useState();
+
 
   return (
     <main>
