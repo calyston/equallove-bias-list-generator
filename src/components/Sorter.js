@@ -70,11 +70,17 @@ const Sorter = () => {
       {/* Determining which Section Displays */}
       {!sortingComplete ?
         <section id="question-container" >
-          <figure id="optionA">
-          </figure>
+          {newOption &&
+            <figure id="optionA">
+              <img src={newOption.photo} alt='#' />
+              <p>{newOption.name}</p>
+            </figure>}
           <span>or</span>
-          <figure id="optionB">
-          </figure>
+          {resultsList[0] &&
+            <figure id="optionB">
+              <img src={resultsList[midPointIndex].photo} alt='#' />
+              <p>{resultsList[midPointIndex].name}</p>
+            </figure>}
         </section>
         :
         <section id="results-container">
