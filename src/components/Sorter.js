@@ -35,7 +35,7 @@ const Sorter = () => {
 
   const [resultsList, setResultsList] = useState([]);
 
-  const [currentOption, setCurrentOption] = useState();
+  const [sortedOption, setSortedOption] = useState();
 
   const [newOption, setNewOption] = useState();
 
@@ -63,7 +63,37 @@ const Sorter = () => {
       const [newMember] = groupMembers.splice(Math.floor(Math.random() * groupMembers.length), 1);
       setNewOption(newMember);
     }
-  }, [resultsList.length])
+  }, [resultsList.length]);
+
+  //Binary Insertion Sorter
+  const insertionSorter = (decision) => {
+    console.log(decision);
+
+    let tempHighestResultsListIndex = highestResultsListIndex;
+    let tempLowestResultsListIndex = lowestResultsListIndex;
+    let tempMidPointIndex = midPointIndex;
+    //Rank New Option Higher than Sorted Option
+    if (decision === 'rankHigher') {
+      if (midPointIndex === 0) {
+        tempHighestResultsListIndex = 0
+        tempLowestResultsListIndex = 0
+      } else {
+        tempHighestResultsListIndex = tempMidPointIndex;
+      }
+    } else {
+      //Rank New Option one place Lower than Midpoint of Results List
+      tempLowestResultsListIndex = tempMidPointIndex + 1;
+    }
+
+    //If no more sorting is needed
+    if (tempHighestResultsListIndex === tempLowestResultsListIndex) {
+      resultsList.splice(tempHighestResultsListIndex, 0, newOption)
+      tempHighestResultsListIndex = resultsList.length
+      tempLowestResultsListIndex = 0
+      //finding the midpoint in the current results list
+      tempMidPointIndex = Math.floor((tempHighestResultsListIndex + tempLowestResultsListIndex) / 2)
+    }
+  }
 
   return (
     <main>
@@ -71,13 +101,13 @@ const Sorter = () => {
       {!sortingComplete ?
         <section id="question-container" >
           {newOption &&
-            <figure id="optionA">
+            <figure id="optionA" onClick={() => { insertionSorter('rankHigher') }}>
               <img src={newOption.photo} alt='#' />
               <p>{newOption.name}</p>
             </figure>}
           <span>or</span>
           {resultsList[0] &&
-            <figure id="optionB">
+            <figure id="optionB" onClick={() => { insertionSorter('rankLower') }}>
               <img src={resultsList[midPointIndex].photo} alt='#' />
               <p>{resultsList[midPointIndex].name}</p>
             </figure>}
