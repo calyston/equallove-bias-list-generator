@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Sorter = () => {
 
@@ -18,10 +18,27 @@ const Sorter = () => {
     ]
   );
 
+  //Variables
+
   const [resultsList, setResultsList] = useState([]);
 
   const [currentChoice, setCurrentChoice] = useState();
 
+  const [newChoice, setNewChoice] = useState();
+
+  const [highestResultsListIndex, setHighestResultsListIndex] = useState(1);
+
+  const [lowestResultsListIndex, setLowestResultsListIndex] = useState(0);
+
+  const [midPointIndex, setMidPointIndex] = useState(0);
+
+  //Initial Member Selection on App Loading
+
+  useEffect(() => {
+    const randomMemberIndex = Math.floor(Math.random() * groupMembers.length);
+    const [initialMember] = groupMembers.splice(randomMemberIndex, 1);
+    setResultsList([initialMember]);
+  }, []);
 
   return (
     <main>
