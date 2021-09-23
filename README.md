@@ -1,3 +1,26 @@
+# =LOVE Bias List Generator
+
+The =LOVE Bias List Generator is a responsive list generator based on user input. Each member of =LOVE will be placed head-to-head for the user to select one option of the two, the results being placed in a list which is displayed upon completion.
+
+### Live Preview: 
+
+### Gif:
+
+## Technologies Used
+
+React, CSS3, GIT, Bash.
+
+## Personal Learnings
+
+This project is a rework of my [IZ*ONE Bias List Generator](https://github.com/calyston/izone-bias-list-generator), where I have rewritten the code to make it a React App instead of vanilla JavaScript.
+
+## Installation Instructions
+
+To run the =LOVE Bias List Generator, download this project and then run on a local server of your choice.
+
+#### Written by Christine Lyston
+#### Date: September 2021
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
