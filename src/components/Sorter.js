@@ -22,9 +22,9 @@ const Sorter = () => {
 
   const [resultsList, setResultsList] = useState([]);
 
-  const [currentChoice, setCurrentChoice] = useState();
+  const [currentOption, setCurrentOption] = useState();
 
-  const [newChoice, setNewChoice] = useState();
+  const [newOption, setNewOption] = useState();
 
   const [highestResultsListIndex, setHighestResultsListIndex] = useState(1);
 
@@ -35,10 +35,20 @@ const Sorter = () => {
   //Initial Member Selection on App Loading
 
   useEffect(() => {
-    const randomMemberIndex = Math.floor(Math.random() * groupMembers.length);
-    const [initialMember] = groupMembers.splice(randomMemberIndex, 1);
+    const [initialMember] = groupMembers.splice(Math.floor(Math.random() * groupMembers.length), 1);
     setResultsList([initialMember]);
   }, []);
+
+  //Console Logged Results List
+  console.log(resultsList);
+
+  //Create New Option
+  useEffect(() => {
+    if (resultsList.length !== 0) {
+      const [newMember] = groupMembers.splice(Math.floor(Math.random() * groupMembers.length), 1);
+      setNewOption(newMember);
+    }
+  }, [resultsList.length])
 
   return (
     <main>

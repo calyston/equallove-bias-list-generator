@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer>
-      <ul class="footer-sns">
+      <ul className="footer-sns">
         <li>Official Website</li>
       </ul>
       {/* <ul class="footer-sns">
