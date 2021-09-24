@@ -8,7 +8,7 @@ The =LOVE Bias List Generator is a responsive list generator based on user input
 
 ## Technologies Used
 
-React, CSS3, GIT, Bash.
+![React](https://img.shields.io/badge/-React-blue) ![CSS3](https://img.shields.io/badge/-CSS3-blue) ![GIT](https://img.shields.io/badge/-GIT-lightgrey) ![Bash](https://img.shields.io/badge/-Bash-lightgrey)
 
 ## Personal Learnings
 
