@@ -33,6 +33,8 @@ const Sorter = () => {
 
   //Variables
 
+  const [numberOfMembers, setNumberOfMembers] = useState();
+
   const [resultsList, setResultsList] = useState([]);
 
   const [sortedOption, setSortedOption] = useState();
@@ -50,6 +52,7 @@ const Sorter = () => {
   //Initial Member Selection on App Loading
 
   useEffect(() => {
+    setNumberOfMembers(groupMembers.length);
     const [initialMember] = groupMembers.splice(Math.floor(Math.random() * groupMembers.length), 1);
     setResultsList([initialMember]);
   }, []);
@@ -60,9 +63,15 @@ const Sorter = () => {
   //Create New Option
   useEffect(() => {
     if (resultsList.length !== 0) {
-      const [newMember] = groupMembers.splice(Math.floor(Math.random() * groupMembers.length), 1);
-      setNewOption(newMember);
+      if (resultsList.length < numberOfMembers) {
+        console.log(resultsList);
+        const [newMember] = groupMembers.splice(Math.floor(Math.random() * groupMembers.length), 1);
+        setNewOption(newMember);
+      } else {
+        setSortingComplete(true);
+      }
     }
+
   }, [resultsList.length]);
 
   //Binary Insertion Sorter
@@ -90,9 +99,13 @@ const Sorter = () => {
       resultsList.splice(tempHighestResultsListIndex, 0, newOption)
       tempHighestResultsListIndex = resultsList.length
       tempLowestResultsListIndex = 0
-      //finding the midpoint in the current results list
-      tempMidPointIndex = Math.floor((tempHighestResultsListIndex + tempLowestResultsListIndex) / 2)
     }
+    //Finding the midpoint in the current results list
+    tempMidPointIndex = Math.floor((tempHighestResultsListIndex + tempLowestResultsListIndex) / 2);
+
+    setHighestResultsListIndex(tempHighestResultsListIndex);
+    setLowestResultsListIndex(tempLowestResultsListIndex);
+    setMidPointIndex(tempMidPointIndex);
   }
 
   return (
