@@ -130,24 +130,24 @@ figure p {
 
 /* RETRY BUTTON */
 #retry {
+  color: #F5F0F6;
   background-color: #FF64A1;
   border-radius: 10px;
   box-shadow: 3px 3px #DBD7DB;
   padding: 5px 10px;
   text-shadow: none;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
 }
 
-#retry a:link {
-  color: #F5F0F6;
-  text-decoration: none;
+#retry:hover {
+  color: #FF9AC8;
 }
 
-#retry a:visited {
-  color: #F5F0F6;
-}
-
-#retry a:hover {
-  color: #FF64A1;
+#retry:active {
+  transform: translateX(3px);
+  transform: translateY(3px);
+  box-shadow: none;
 }
 
 
@@ -227,28 +227,6 @@ footer a:hover {
 
 /* DESKTOP VIEW */
 @media screen and (min-width: 1240px) {
-
-  /* RETRY BUTTON */
-  #retry {
-    background-color: #ffffff;
-    border-radius: none;
-    box-shadow: none;
-    padding: none;
-    text-shadow: 2px 2px #DBD7DB;
-  }
-
-  #retry a:link {
-    color: #000000;
-    text-decoration: none;
-  }
-  
-  #retry a:visited {
-    color: #000000;
-  }
-  
-  #retry a:hover {
-    color: #FF64A1;
-  }
 
   /* FOOTER */
   footer a:link {
