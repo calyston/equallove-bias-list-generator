@@ -128,7 +128,12 @@ const Sorter = () => {
         :
         <section id="results-container">
           <h2>Result:</h2>
-          <ol id="results-list"></ol>
+          <ol id="results-list">
+            <img src={resultsList[0].photo} alt="#" />
+            {resultsList.map((member) =>
+              <li>{member.name}</li>
+            )}
+          </ol>
           <h2 id="retry">Retry?</h2>
         </section>
       }
