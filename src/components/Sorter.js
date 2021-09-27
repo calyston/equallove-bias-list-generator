@@ -108,6 +108,11 @@ const Sorter = () => {
     setMidPointIndex(tempMidPointIndex);
   }
 
+  //Reset Game with Retry Button
+  const resetGame = () => {
+    window.location.reload();
+  }
+
   return (
     <main>
       {/* Determining which Section Displays */}
@@ -134,7 +139,7 @@ const Sorter = () => {
               <li>{member.name}</li>
             )}
           </ol>
-          <h2 id="retry">Retry?</h2>
+          <h2 id="retry" onClick={() => { resetGame() }}>Retry?</h2>
         </section>
       }
     </main >

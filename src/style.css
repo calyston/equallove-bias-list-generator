@@ -145,8 +145,7 @@ figure p {
 }
 
 #retry:active {
-  transform: translateX(3px);
-  transform: translateY(3px);
+  transform: translate(3px, 3px);
   box-shadow: none;
 }
 
