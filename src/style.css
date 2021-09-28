@@ -31,7 +31,7 @@ h2 {
   font-size: 3rem;
   font-weight: bold;
   margin: 1.5rem;
-  color: #FF64A1;
+  color: #EA6C81;
   text-shadow: 2px 2px #DBD7DB;
 }
 
@@ -75,9 +75,9 @@ figure p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 5px solid #FF64A1;
+  border: 5px solid #EA6C81;
   border-radius: 10px;
-  box-shadow: 4px 4px #FF9AC8;
+  box-shadow: 4px 4px #FADBE1;
   cursor: pointer;
 }
 
@@ -93,9 +93,9 @@ figure p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 5px solid #FF64A1;
+  border: 5px solid #EA6C81;
   border-radius: 10px;
-  box-shadow: 4px 4px #FF9AC8;
+  box-shadow: 4px 4px #FADBE1;
   cursor: pointer;
 }
 
@@ -118,11 +118,11 @@ figure p {
   width: 25rem;
   display: flex;
   flex-direction: column;
-  border: 5px solid #FF64A1;
+  border: 5px solid #EA6C81;
   border-radius: 10px;
   padding: 0px;
   padding-bottom: 1.5rem;
-  box-shadow: 4px 4px #FF9AC8;
+  box-shadow: 4px 4px #FADBE1;
 }
 
 #results-list img {
@@ -141,7 +141,7 @@ figure p {
 /* RETRY BUTTON */
 #retry {
   color: #F5F0F6;
-  background-color: #FF64A1;
+  background-color: #EA6C81;
   border-radius: 10px;
   box-shadow: 3px 3px #DBD7DB;
   padding: 5px 10px;
@@ -151,7 +151,7 @@ figure p {
 }
 
 #retry:hover {
-  color: #FF9AC8;
+  color: #FADBE1;
 }
 
 #retry:active {
@@ -172,17 +172,33 @@ footer ul {
   margin: 0;
 }
 
+#sns-yt {
+  color: #FF0000;
+}
+
+#sns-yt:hover {
+  color: #EA6C81;
+}
+
+#sns-t {
+  color: #1DA1F2;
+}
+
+#sns-t:hover {
+  color: #EA6C81;
+}
+
 footer a:link {
+  color: #000000;
   text-decoration: none;
-  color: #FF64A1;
 }
 
 footer a:visited {
-  color: #FF64A1;
+  color: #000000;
 }
 
 footer a:hover {
-  color: #FF64A1;
+  color: #EA6C81;
 }
 
 .footer-sns {
@@ -196,7 +212,7 @@ footer a:hover {
 }
 
 .fab {
-  color: #FF64A1;
+  color: #EA6C81;
 }
 
 
@@ -229,19 +245,6 @@ footer a:hover {
 
 
 /* DESKTOP VIEW */
-@media screen and (min-width: 1240px) {
+/* @media screen and (min-width: 1240px) {
 
-  /* FOOTER */
-  footer a:link {
-    text-decoration: none;
-    color: black;
-  }
-    
-  footer a:visited {
-    color: black;
-  }
-    
-  footer a:hover {
-    color: #FF64A1;
-  }
-}
+} */
