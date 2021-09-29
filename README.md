@@ -4,6 +4,8 @@ The =LOVE Bias List Generator is a responsive list generator based on user input
 
 ### Live Preview: 
 
+https://calyston-equallovelistgenerator.netlify.app
+
 ### Gif:
 
 ## Technologies Used
