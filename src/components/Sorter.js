@@ -37,8 +37,6 @@ const Sorter = () => {
 
   const [resultsList, setResultsList] = useState([]);
 
-  const [sortedOption, setSortedOption] = useState();
-
   const [newOption, setNewOption] = useState();
 
   const [highestResultsListIndex, setHighestResultsListIndex] = useState(1);
