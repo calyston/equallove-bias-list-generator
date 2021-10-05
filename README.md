@@ -8,7 +8,7 @@ https://calyston-equallovelistgenerator.netlify.app
 
 ### Screenshot:
 
-![](equal-love-screenshot.png)
+![](equal-love-screenshot350.png)
 
 ### Gif:
 
