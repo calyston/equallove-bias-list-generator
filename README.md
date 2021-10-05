@@ -11,7 +11,7 @@ https://calyston-equallovelistgenerator.netlify.app
 ![](equal-love-screenshot350.png)
 
 ### Gif:
-![](EqualLoveTabletGif)
+![](EqualLoveTabletGif.gif)
 
 ## Technologies Used
 
